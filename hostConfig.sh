@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Read every databases from mysql and check if exists in some file /home/x/public
+#Read every databases from mysql and check if exists in some file /home/x/public contain it
 for OUTPUT in $(mysql -e 'show databases')
 do
   	IFS='_' read -a name <<< "$OUTPUT"
