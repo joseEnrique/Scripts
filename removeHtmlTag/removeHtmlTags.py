@@ -4,16 +4,16 @@ import re
 
 #Add source file path
 
-fileHtmlSource = "/home/quique/Escritorio/wp2ghost_export_1448280378.json"
+fileHtmlSource = "/home/quique/Escritorio/sinhtml.json"
 # Add destination file path
 
-fileHtmlDestination = "/home/quique/Escritorio/sinhtml.json"
+fileHtmlDestination = "/home/quique/Escritorio/sinhtml1.json"
 
 #Return string without html tags
 
 def cleanHtml(textwithHtml):
-	cleanr = re.compile('<.*?>')
-	cleantext = re.sub(cleanr,'', textwithHtml)
+	cleanr = re.compile('http:\/\/enreda.coop\/wp-content\/')
+	cleantext = re.sub(cleanr,'http:\/\/blog.enreda.coop\/content\/', textwithHtml)
 	return cleantext
 
 #Return string with file convert to a unique string
