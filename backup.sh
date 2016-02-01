@@ -5,6 +5,8 @@
 set -x
 
 
+#Make backup on fly from you server
+
 #setup for your case
 IP='systerminal.com'
 LOCALDST="/mnt/backups" #where store
